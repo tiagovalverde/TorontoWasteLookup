@@ -4,7 +4,7 @@
     --color-primary: #23995c;
     --color-primary-light: #f7fefa;
     --color-secondary: #1d5a93;
-    --color-grey-: #aaaaaa;
+    --color-grey: #aaaaaa;
 }
 
 * {
@@ -21,7 +21,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem  = 10px;
-    font-weight: 600;
+    font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
     line-height: 1.6;
