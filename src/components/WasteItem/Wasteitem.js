@@ -5,8 +5,7 @@ import sprite from '../../assets/icons/sprite.svg';
 
 class result extends Component {
 
-    decodeHTML() {
-        let encodedHTML = "&lt;ul&gt; &lt;li&gt;Empty and rinse (if necessary and possible) this item before placing it in the&amp;nbsp;&lt;strong&gt;Blue Bin&lt;/strong&gt;.&lt;/li&gt; &lt;li&gt;Any type of black or compostable plastic is not accepted and should be placed in the &lt;strong&gt;Garbage Bin&lt;/strong&gt;.&lt;/li&gt; &lt;/ul&gt;";
+    decodeHTML(encodedHTML) {
         let parser = new DOMParser();
         let decodedHTML = parser.parseFromString(encodedHTML, 'text/html');
 
@@ -15,30 +14,31 @@ class result extends Component {
         };
     }
 
-    getStarColor() {
-
-    }
-
     render() {
+
+        let svgClass = this.props.favourite ? 'waste-icon__svg-favourite' : '';
 
         return (
             <div className="waste">
                 <div className="waste-headline">
-                    <span className="waste-icon">
-                        <svg className="waste-icon__svg waste-icon__svg-favourite">
-                            <use xlinkHref={sprite + '#icon-star'}></use>
-                        </svg>
-                    </span>
-                    <p className="waste-title">Garbage (consider donation)</p>
+                    <div className="waste-icon">
+                        <span
+                            className="waste-icon__controller"
+                            onClick={this.props.clicked}
+                        >
+                            <svg className={'waste-icon__svg ' + svgClass}>
+                                <use xlinkHref={sprite + '#icon-star'}></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <p className="waste-title">{this.props.title}</p>
                 </div>
 
-                <div className="waste-body" dangerouslySetInnerHTML={this.decodeHTML()}>
+                <div className="waste-body" dangerouslySetInnerHTML={this.decodeHTML(this.props.body)}>
                 </div>
-
             </div>
         )
     }
 };
 
 export default result;
-

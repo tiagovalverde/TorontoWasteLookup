@@ -1,28 +1,32 @@
 .waste {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.5rem;  
 
     &-headline {
         min-width: 45%;
-        display: flex;
+        display: flex; 
     }
 
     &-icon {
-
+        &__controller {
+            display:block;
+        }
     }
 
     &-icon__svg {
         width: 1.5rem;
         height: 1.5rem;
         fill: var(--color-grey);
-        margin-right: .5rem;
     }
     
     &-icon__svg-favourite {
         fill: var(--color-primary)
     }
     
-    &-title {}
+    &-title {
+        margin-left: .5rem;
+    }
     &-body {
         margin-left: 2rem;
     }

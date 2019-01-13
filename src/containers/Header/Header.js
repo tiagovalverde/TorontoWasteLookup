@@ -3,7 +3,6 @@ import Headline from './../../components/Headline/Headline';
 
 class Header extends Component {
 
-
     render() {
         return (
             <div className="Header">
@@ -11,8 +10,6 @@ class Header extends Component {
             </div>
         );
     }
-
-
 }
 
 export default Header;

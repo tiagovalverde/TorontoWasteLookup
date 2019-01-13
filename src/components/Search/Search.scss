@@ -18,5 +18,14 @@
         border-radius: .2rem;
         font-family: inherit;
         cursor: pointer;
+        
+        display: flex;
+        justify-content: center;
+
+        &__svg {
+            width: 850%;
+            height: 85%;
+            fill: white;
+        }
     }
 }

@@ -1,4 +1,4 @@
-# Shopify - Web Engineer Challenge - Summer 2019
+# Web Engineer Challenge - Summer 2019
 
 ## User Stories
 
