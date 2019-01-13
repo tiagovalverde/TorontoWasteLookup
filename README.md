@@ -1,4 +1,4 @@
-# Web Engineer Challenge - Summer 2019
+# Toronto Waste Lookup
 
 ## User Stories
 
